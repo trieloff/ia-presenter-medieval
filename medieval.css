@@ -263,14 +263,21 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
   color: #8B0000;
   font-weight: bold;
   text-shadow: 
-    4px 4px 0px #2C1810,
-    5px 5px 0px #654321,
-    6px 6px 12px rgba(0,0,0,0.8),
-    0 0 16px rgba(139,0,0,0.6),
-    0 0 24px rgba(139,0,0,0.4),
-    0 0 32px rgba(212,175,55,0.3);
-  -webkit-text-stroke: 3px #654321;
-  filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.7));
+    2px 2px 0px #4A3C28,
+    3px 3px 0px #3A2918,
+    4px 4px 0px #2A1F0E,
+    5px 5px 0px #1A0F06,
+    1px 1px 0px rgba(255,255,255,0.3),
+    -1px -1px 0px rgba(0,0,0,0.8),
+    6px 6px 2px rgba(0,0,0,0.4),
+    8px 8px 4px rgba(0,0,0,0.2);
+  -webkit-text-stroke: 2px #654321;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255,255,255,0.2),
+    inset -2px -2px 4px rgba(0,0,0,0.4),
+    4px 4px 0px #3A2918,
+    5px 5px 0px #2A1F0E,
+    6px 6px 2px rgba(0,0,0,0.6);
   border: 5px double rgba(212, 175, 55, 0.6);
   border-radius: 12px;
   padding: 0.15em 0.2em;
@@ -294,11 +301,19 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
   color: #8B0000;
   font-weight: bold;
   text-shadow: 
-    3px 3px 0px #2C1810,
-    4px 4px 8px rgba(0,0,0,0.6),
-    0 0 12px rgba(139,0,0,0.4);
-  -webkit-text-stroke: 2px #654321;
-  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    1px 1px 0px #4A3C28,
+    2px 2px 0px #3A2918,
+    3px 3px 0px #2A1F0E,
+    4px 4px 0px #1A0F06,
+    1px 1px 0px rgba(255,255,255,0.2),
+    -1px -1px 0px rgba(0,0,0,0.6),
+    4px 4px 2px rgba(0,0,0,0.3);
+  -webkit-text-stroke: 1px #654321;
+  box-shadow: 
+    inset 1px 1px 2px rgba(255,255,255,0.15),
+    inset -1px -1px 2px rgba(0,0,0,0.3),
+    3px 3px 0px #3A2918,
+    4px 4px 2px rgba(0,0,0,0.4);
   border: 3px solid rgba(212, 175, 55, 0.4);
   border-radius: 8px;
   padding: 0.1em 0.15em;
@@ -496,16 +511,22 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 .dark .layout-title > div > p:first-child::first-letter {
   color: #FFD700 !important;
   text-shadow: 
-    3px 3px 0px #8B4513,
-    4px 4px 0px #654321,
-    5px 5px 0px #2C1810,
-    6px 6px 16px rgba(0,0,0,0.9),
-    0 0 20px rgba(255,215,0,0.9),
-    0 0 32px rgba(255,215,0,0.7),
-    0 0 48px rgba(255,215,0,0.5),
-    0 0 64px rgba(255,215,0,0.3);
-  -webkit-text-stroke: 3px #8B4513;
-  filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.8));
+    2px 2px 0px #5A3A1A,
+    3px 3px 0px #4A2F15,
+    4px 4px 0px #3A2510,
+    5px 5px 0px #2A1A0A,
+    6px 6px 0px #1A1005,
+    1px 1px 0px rgba(255,255,200,0.4),
+    -1px -1px 0px rgba(0,0,0,0.9),
+    7px 7px 2px rgba(0,0,0,0.7),
+    9px 9px 4px rgba(0,0,0,0.4);
+  -webkit-text-stroke: 2px #8B4513;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255,255,200,0.3),
+    inset -2px -2px 4px rgba(0,0,0,0.6),
+    5px 5px 0px #4A2F15,
+    6px 6px 0px #3A2510,
+    7px 7px 2px rgba(0,0,0,0.8);
   border: 5px double rgba(255, 215, 0, 0.8);
   background: 
     radial-gradient(circle at 40% 40%, rgba(255,215,0,0.3) 0%, transparent 60%),
@@ -520,14 +541,19 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 .dark .layout-default > div > p:first-child::first-letter {
   color: #FFD700 !important;
   text-shadow: 
-    2px 2px 0px #8B4513,
-    3px 3px 0px #654321,
-    4px 4px 8px rgba(0,0,0,0.8),
-    0 0 16px rgba(255,215,0,0.8),
-    0 0 24px rgba(255,215,0,0.6),
-    0 0 32px rgba(255,215,0,0.4);
-  -webkit-text-stroke: 2px #8B4513;
-  filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.7));
+    1px 1px 0px #5A3A1A,
+    2px 2px 0px #4A2F15,
+    3px 3px 0px #3A2510,
+    4px 4px 0px #2A1A0A,
+    1px 1px 0px rgba(255,255,200,0.3),
+    -1px -1px 0px rgba(0,0,0,0.7),
+    5px 5px 2px rgba(0,0,0,0.5);
+  -webkit-text-stroke: 1px #8B4513;
+  box-shadow: 
+    inset 1px 1px 2px rgba(255,255,200,0.2),
+    inset -1px -1px 2px rgba(0,0,0,0.4),
+    4px 4px 0px #4A2F15,
+    5px 5px 2px rgba(0,0,0,0.6);
   border: 3px solid rgba(255, 215, 0, 0.6);
   background: linear-gradient(135deg, 
     rgba(255, 215, 0, 0.2), 
