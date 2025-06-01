@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Parchment noise filter -->
+    <filter id="parchmentNoise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence baseFrequency="0.9" numOctaves="3" result="noise" seed="2"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0.02 0.04 0.06 0.08"/>
+      </feComponentTransfer>
+      <feComposite operator="multiply" in2="SourceGraphic"/>
+    </filter>
+    
+    <!-- Fine paper grain -->
+    <filter id="paperGrain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence baseFrequency="2.5" numOctaves="1" result="grain" seed="5"/>
+      <feColorMatrix in="grain" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0.01 0.02 0.03"/>
+      </feComponentTransfer>
+      <feComposite operator="screen" in2="SourceGraphic"/>
+    </filter>
+    
+    <!-- Subtle aging stains -->
+    <pattern id="ageSpots" patternUnits="userSpaceOnUse" width="200" height="150">
+      <circle cx="50" cy="40" r="8" fill="rgba(139,69,19,0.03)"/>
+      <circle cx="150" cy="100" r="12" fill="rgba(160,82,45,0.02)"/>
+      <circle cx="80" cy="120" r="6" fill="rgba(101,67,33,0.025)"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base parchment overlay -->
+  <rect width="100%" height="100%" fill="rgba(245,230,211,0.08)" filter="url(#parchmentNoise)"/>
+  
+  <!-- Paper grain layer -->
+  <rect width="100%" height="100%" fill="rgba(210,180,140,0.04)" filter="url(#paperGrain)"/>
+  
+  <!-- Subtle age spots -->
+  <rect width="100%" height="100%" fill="url(#ageSpots)" opacity="0.6"/>
+  
+  <!-- Vignette edge darkening -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="70%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(101,67,33,0.08)"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#vignette)"/>
+</svg>

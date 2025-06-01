@@ -44,6 +44,37 @@
   src: url('fonts/AlmendraSC-Regular.ttf') format('truetype');
 }
 
+/*************************************************************************************************/
+/* PARCHMENT BACKGROUND OVERLAY */
+
+/* Apply parchment texture over gradient backgrounds */
+.slide-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('parchment-texture.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+}
+
+/* Ensure slide content appears above parchment overlay */
+.slide-content,
+[class*="layout-"] > div {
+  position: relative;
+  z-index: 2;
+}
+
+/*************************************************************************************************/
+/* TYPOGRAPHY */
+
 /* Font Size */
 section > :not([class*="layout-"]) h1,
 [class*="layout-"] > div h1 {
