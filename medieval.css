@@ -56,6 +56,8 @@
   right: 0;
   bottom: 0;
   background:
+    /* Vignette effect */
+    radial-gradient(ellipse at center, transparent 20%, rgba(101,67,33,0.15) 70%, rgba(139,69,19,0.25) 100%),
     /* Paper grain texture */
     radial-gradient(circle at 25% 25%, rgba(139,69,19,0.02) 1px, transparent 1px),
     radial-gradient(circle at 75% 75%, rgba(160,82,45,0.015) 1px, transparent 1px),
@@ -67,13 +69,15 @@
     /* Overall parchment tint */
     linear-gradient(45deg, rgba(245,230,211,0.04), rgba(210,180,140,0.02));
   background-size:
+    100% 100%,
     3px 3px, 5px 5px, 4px 4px,
     120px 80px, 100px 60px, 80px 50px,
     100% 100%;
   box-shadow:
-    inset 0 0 100px rgba(139,69,19,0.05),
-    inset 0 0 200px rgba(101,67,33,0.03),
-    inset 0 0 300px rgba(139,69,19,0.02);
+    inset 0 0 150px rgba(139,69,19,0.08),
+    inset 0 0 250px rgba(101,67,33,0.06),
+    inset 0 0 350px rgba(139,69,19,0.04),
+    inset 0 0 500px rgba(101,67,33,0.03);
   pointer-events: none;
   z-index: 1;
   opacity: 0.6;
@@ -92,6 +96,8 @@
 /* Light theme - Parchment colors */
 .light .slide-background::after {
   background:
+    /* Enhanced vignette for light mode */
+    radial-gradient(ellipse at center, transparent 15%, rgba(101,67,33,0.12) 60%, rgba(139,69,19,0.22) 85%, rgba(101,67,33,0.35) 100%),
     /* Paper grain texture */
     radial-gradient(circle at 25% 25%, rgba(139,69,19,0.02) 1px, transparent 1px),
     radial-gradient(circle at 75% 75%, rgba(160,82,45,0.015) 1px, transparent 1px),
@@ -102,11 +108,20 @@
     radial-gradient(ellipse at 60% 40%, rgba(101,67,33,0.025) 4px, transparent 8px),
     /* Overall parchment tint */
     linear-gradient(45deg, rgba(245,230,211,0.06), rgba(210,180,140,0.04));
+  box-shadow:
+    inset 0 0 120px rgba(139,69,19,0.12),
+    inset 0 0 220px rgba(101,67,33,0.08),
+    inset 0 0 320px rgba(139,69,19,0.06),
+    inset 0 0 450px rgba(101,67,33,0.04),
+    inset 0 0 600px rgba(160,82,45,0.02);
+  opacity: 0.75;
 }
 
 /* Dark theme - Royal colors with rich textures */
 .dark .slide-background::after {
   background:
+    /* Dark royal vignette */
+    radial-gradient(ellipse at center, transparent 10%, rgba(75,0,130,0.15) 50%, rgba(26,10,51,0.25) 80%, rgba(139,0,0,0.35) 100%),
     /* Royal texture pattern */
     radial-gradient(circle at 30% 30%, rgba(212,175,55,0.08) 2px, transparent 2px),
     radial-gradient(circle at 70% 70%, rgba(220,20,60,0.06) 1px, transparent 1px),
@@ -118,9 +133,10 @@
     /* Deep royal base */
     linear-gradient(135deg, rgba(26,10,51,0.15), rgba(46,16,101,0.12), rgba(75,0,130,0.1));
   box-shadow:
-    inset 0 0 100px rgba(212,175,55,0.15),
-    inset 0 0 200px rgba(75,0,130,0.12),
-    inset 0 0 300px rgba(139,0,0,0.08);
+    inset 0 0 120px rgba(212,175,55,0.18),
+    inset 0 0 220px rgba(75,0,130,0.15),
+    inset 0 0 320px rgba(139,0,0,0.12),
+    inset 0 0 450px rgba(26,10,51,0.08);
   opacity: 0.8;
 }
 
@@ -160,10 +176,10 @@ blockquote {
 /* Medieval line styling for blockquotes */
 blockquote .line {
   height: 2px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    currentColor 20%, 
-    currentColor 80%, 
+  background: linear-gradient(90deg,
+    transparent 0%,
+    currentColor 20%,
+    currentColor 80%,
     transparent 100%);
   margin: 0.8em 0;
   position: relative;
@@ -262,7 +278,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
   margin: 0.05em 0.2em 0 0;
   color: #8B0000;
   font-weight: bold;
-  text-shadow: 
+  text-shadow:
     2px 2px 0px #4A3C28,
     3px 3px 0px #3A2918,
     4px 4px 0px #2A1F0E,
@@ -272,7 +288,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
     6px 6px 2px rgba(0,0,0,0.4),
     8px 8px 4px rgba(0,0,0,0.2);
   -webkit-text-stroke: 2px #654321;
-  box-shadow: 
+  box-shadow:
     inset 2px 2px 4px rgba(255,255,255,0.2),
     inset -2px -2px 4px rgba(0,0,0,0.4),
     4px 4px 0px #3A2918,
@@ -281,11 +297,11 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
   border: 5px double rgba(212, 175, 55, 0.6);
   border-radius: 12px;
   padding: 0.15em 0.2em;
-  background: 
+  background:
     radial-gradient(circle at 30% 30%, rgba(255,215,0,0.2) 0%, transparent 60%),
-    linear-gradient(135deg, 
-      rgba(245, 230, 211, 0.4), 
-      rgba(210, 180, 140, 0.3), 
+    linear-gradient(135deg,
+      rgba(245, 230, 211, 0.4),
+      rgba(210, 180, 140, 0.3),
       rgba(139, 69, 19, 0.2),
       rgba(212, 175, 55, 0.1));
   position: relative;
@@ -300,7 +316,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
   margin: 0.05em 0.15em 0 0;
   color: #8B0000;
   font-weight: bold;
-  text-shadow: 
+  text-shadow:
     1px 1px 0px #4A3C28,
     2px 2px 0px #3A2918,
     3px 3px 0px #2A1F0E,
@@ -309,7 +325,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
     -1px -1px 0px rgba(0,0,0,0.6),
     4px 4px 2px rgba(0,0,0,0.3);
   -webkit-text-stroke: 1px #654321;
-  box-shadow: 
+  box-shadow:
     inset 1px 1px 2px rgba(255,255,255,0.15),
     inset -1px -1px 2px rgba(0,0,0,0.3),
     3px 3px 0px #3A2918,
@@ -317,9 +333,9 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
   border: 3px solid rgba(212, 175, 55, 0.4);
   border-radius: 8px;
   padding: 0.1em 0.15em;
-  background: linear-gradient(135deg, 
-    rgba(245, 230, 211, 0.3), 
-    rgba(210, 180, 140, 0.2), 
+  background: linear-gradient(135deg,
+    rgba(245, 230, 211, 0.3),
+    rgba(210, 180, 140, 0.2),
     rgba(139, 69, 19, 0.1));
 }
 
@@ -510,7 +526,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 .dark .layout-cover > div > p:first-child::first-letter,
 .dark .layout-title > div > p:first-child::first-letter {
   color: #FFD700 !important;
-  text-shadow: 
+  text-shadow:
     2px 2px 0px #5A3A1A,
     3px 3px 0px #4A2F15,
     4px 4px 0px #3A2510,
@@ -521,18 +537,18 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
     7px 7px 2px rgba(0,0,0,0.7),
     9px 9px 4px rgba(0,0,0,0.4);
   -webkit-text-stroke: 2px #8B4513;
-  box-shadow: 
+  box-shadow:
     inset 2px 2px 4px rgba(255,255,200,0.3),
     inset -2px -2px 4px rgba(0,0,0,0.6),
     5px 5px 0px #4A2F15,
     6px 6px 0px #3A2510,
     7px 7px 2px rgba(0,0,0,0.8);
   border: 5px double rgba(255, 215, 0, 0.8);
-  background: 
+  background:
     radial-gradient(circle at 40% 40%, rgba(255,215,0,0.3) 0%, transparent 60%),
-    linear-gradient(135deg, 
-      rgba(255, 215, 0, 0.3), 
-      rgba(139, 69, 19, 0.4), 
+    linear-gradient(135deg,
+      rgba(255, 215, 0, 0.3),
+      rgba(139, 69, 19, 0.4),
       rgba(26, 10, 51, 0.5),
       rgba(75, 0, 130, 0.3));
 }
@@ -540,7 +556,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 /* Dark theme - regular drop caps for other slides */
 .dark .layout-default > div > p:first-child::first-letter {
   color: #FFD700 !important;
-  text-shadow: 
+  text-shadow:
     1px 1px 0px #5A3A1A,
     2px 2px 0px #4A2F15,
     3px 3px 0px #3A2510,
@@ -549,15 +565,15 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
     -1px -1px 0px rgba(0,0,0,0.7),
     5px 5px 2px rgba(0,0,0,0.5);
   -webkit-text-stroke: 1px #8B4513;
-  box-shadow: 
+  box-shadow:
     inset 1px 1px 2px rgba(255,255,200,0.2),
     inset -1px -1px 2px rgba(0,0,0,0.4),
     4px 4px 0px #4A2F15,
     5px 5px 2px rgba(0,0,0,0.6);
   border: 3px solid rgba(255, 215, 0, 0.6);
-  background: linear-gradient(135deg, 
-    rgba(255, 215, 0, 0.2), 
-    rgba(139, 69, 19, 0.3), 
+  background: linear-gradient(135deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(139, 69, 19, 0.3),
     rgba(26, 10, 51, 0.4));
 }
 
@@ -569,7 +585,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 .dark em,
 .dark strong {
   color: #FFD700;
-  text-shadow: 
+  text-shadow:
     0 0 8px rgba(255, 215, 0, 0.8),
     0 0 16px rgba(255, 215, 0, 0.6),
     1px 1px 2px rgba(0,0,0,0.8);
