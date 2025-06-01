@@ -55,7 +55,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     /* Paper grain texture */
     radial-gradient(circle at 25% 25%, rgba(139,69,19,0.02) 1px, transparent 1px),
     radial-gradient(circle at 75% 75%, rgba(160,82,45,0.015) 1px, transparent 1px),
@@ -66,11 +66,11 @@
     radial-gradient(ellipse at 60% 40%, rgba(101,67,33,0.025) 4px, transparent 8px),
     /* Overall parchment tint */
     linear-gradient(45deg, rgba(245,230,211,0.04), rgba(210,180,140,0.02));
-  background-size: 
+  background-size:
     3px 3px, 5px 5px, 4px 4px,
     120px 80px, 100px 60px, 80px 50px,
     100% 100%;
-  box-shadow: 
+  box-shadow:
     inset 0 0 100px rgba(139,69,19,0.05),
     inset 0 0 200px rgba(101,67,33,0.03),
     inset 0 0 300px rgba(139,69,19,0.02);
@@ -97,9 +97,43 @@ section > :not([class*="layout-"]) h1,
   font-size: 2.986em;
 }
 
-/* Reserve Display font for cover and title slide h1 only */
-.layout-cover > div h1,
-.layout-title > div h1 {
+/* Display font for blockquotes */
+blockquote {
+  font-family: 'Almendra Display', serif;
+  font-style: italic;
+  border-left: 4px solid var(--accent-1);
+  padding-left: 1.5em;
+  margin-left: 0;
+  position: relative;
+}
+
+blockquote::before {
+  content: '"';
+  font-family: 'Almendra Display', serif;
+  font-size: 4em;
+  color: rgba(212, 175, 55, 0.3);
+  position: absolute;
+  left: -0.2em;
+  top: -0.3em;
+  line-height: 1;
+}
+
+/* Display font for headings that are the only element on slide */
+[class*="layout-"] > div > h1:only-child,
+[class*="layout-"] > div > h2:only-child,
+[class*="layout-"] > div > h3:only-child {
+  font-family: 'Almendra Display', serif;
+}
+
+/* Display font for h1/h2 that follow lower priority headings (setup scenario) */
+[class*="layout-"] > div > h3 ~ h1,
+[class*="layout-"] > div > h4 ~ h1,
+[class*="layout-"] > div > h5 ~ h1,
+[class*="layout-"] > div > h6 ~ h1,
+[class*="layout-"] > div > h3 ~ h2,
+[class*="layout-"] > div > h4 ~ h2,
+[class*="layout-"] > div > h5 ~ h2,
+[class*="layout-"] > div > h6 ~ h2 {
   font-family: 'Almendra Display', serif;
 }
 section > :not([class*="layout-"]) h2,
