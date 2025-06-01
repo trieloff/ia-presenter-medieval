@@ -1,9 +1,9 @@
 {
-  "Css" : "medieval.css",
-  "Description" : "A medieval-inspired presentation theme with ornate typography and rich textures, perfect for historical content and storytelling.",
-  "Name" : "Medieval",
+  "Css" : "basic.css",
+  "Description" : "description",
+  "Name" : "Basic",
   "Version" : 1,
-  "Author" : "Medieval Theme Designer",
-  "BodyFont" : "Almendra",
-  "TitleFont" : "Almendra Display"
+  "Author" : "author",
+  "BodyFont" : "Helvetica",
+  "TitleFont" : "Helvetica"
 }
