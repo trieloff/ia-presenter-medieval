@@ -92,13 +92,19 @@
 /* Font Size */
 section > :not([class*="layout-"]) h1,
 [class*="layout-"] > div h1 {
-  font-family: 'Almendra Display', serif;
+  font-family: 'Almendra SC', serif;
   line-height: 1;
   font-size: 2.986em;
 }
+
+/* Reserve Display font for cover and title slide h1 only */
+.layout-cover > div h1,
+.layout-title > div h1 {
+  font-family: 'Almendra Display', serif;
+}
 section > :not([class*="layout-"]) h2,
 [class*="layout-"] > div h2 {
-  font-family: 'Almendra Display', serif;
+  font-family: 'Almendra SC', serif;
   line-height: 1.1;
   font-size: 2.488em;
 }
@@ -130,7 +136,7 @@ section > :not([class*="layout-"]) li,
 
 /* Drop caps for first paragraphs in default layout when no headings present */
 .layout-default > div > p:first-child::first-letter {
-  font-family: 'Almendra Display', serif;
+  font-family: 'Almendra SC', serif;
   font-size: 3.5em;
   line-height: 0.8;
   float: left;
