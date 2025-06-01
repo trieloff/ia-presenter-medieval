@@ -91,7 +91,7 @@
 
 /* Light theme - Parchment colors */
 .light .slide-background::after {
-  background: 
+  background:
     /* Paper grain texture */
     radial-gradient(circle at 25% 25%, rgba(139,69,19,0.02) 1px, transparent 1px),
     radial-gradient(circle at 75% 75%, rgba(160,82,45,0.015) 1px, transparent 1px),
@@ -106,7 +106,7 @@
 
 /* Dark theme - Royal colors with rich textures */
 .dark .slide-background::after {
-  background: 
+  background:
     /* Royal texture pattern */
     radial-gradient(circle at 30% 30%, rgba(212,175,55,0.08) 2px, transparent 2px),
     radial-gradient(circle at 70% 70%, rgba(220,20,60,0.06) 1px, transparent 1px),
@@ -117,7 +117,7 @@
     radial-gradient(ellipse at 40% 60%, rgba(139,0,139,0.06) 6px, transparent 12px),
     /* Deep royal base */
     linear-gradient(135deg, rgba(26,10,51,0.15), rgba(46,16,101,0.12), rgba(75,0,130,0.1));
-  box-shadow: 
+  box-shadow:
     inset 0 0 100px rgba(212,175,55,0.15),
     inset 0 0 200px rgba(75,0,130,0.12),
     inset 0 0 300px rgba(139,0,0,0.08);
@@ -133,7 +133,7 @@ section > :not([class*="layout-"]) h1,
   font-family: 'Almendra SC', serif;
   line-height: 1;
   font-size: 2.986em;
-  color: var(--title-text-color);
+  color: var(--title-color);
 }
 
 /* Display font for blockquotes */
@@ -161,7 +161,7 @@ blockquote::before {
 [class*="layout-"] > div blockquote p {
   font-family: 'Almendra Display', serif;
   font-style: italic;
-  color: var(--title-text-color);
+  color: var(--title-color);
 }
 
 /* Display font for headings that are the only element on slide */
@@ -187,27 +187,27 @@ section > :not([class*="layout-"]) h2,
   font-family: 'Almendra SC', serif;
   line-height: 1.1;
   font-size: 2.488em;
-  color: var(--title-text-color);
+  color: var(--title-color);
 }
 section > :not([class*="layout-"]) h3,
 [class*="layout-"] > div h3 {
   font-family: 'Almendra SC', serif;
   line-height: 1.2;
   font-size: 1.728em;
-  color: var(--title-text-color);
+  color: var(--title-color);
 }
 section > :not([class*="layout-"]) h5,
 [class*="layout-"] > div h5 {
   font-family: 'Almendra', serif;
   font-weight: 300;
-  color: var(--title-text-color);
+  color: var(--title-color);
 }
 section > :not([class*="layout-"]) h6,
 [class*="layout-"] > div h6 {
   font-family: 'Almendra', serif;
   font-size: 1em;
   line-height: 1.4;
-  color: var(--title-text-color);
+  color: var(--title-color);
 }
 
 /* Body Text */
@@ -216,7 +216,7 @@ section > :not([class*="layout-"]) p,
 section > :not([class*="layout-"]) li,
 [class*="layout-"] > div li {
   font-family: 'Almendra', serif;
-  color: var(--body-text-color);
+  color: var(--body-color);
 }
 
 /* Drop caps for first paragraphs in default layout when no headings present */
