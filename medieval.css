@@ -91,6 +91,38 @@
 }
 
 /*************************************************************************************************/
+/* DECORATIVE SVG BORDER FOR SLIDES WITHOUT IMAGES */
+/* Adds a medieval-style ornamental band to the bottom of slides that don't have images */
+
+/* Target slides without visible images, background images, and not cover-container using :not() with :has() selector */
+section:not(.cover-container):not([data-background-image]):not(:has(img:not([style*="display: none"]):not([style*="visibility: hidden"]):not([hidden])))::after {
+  content: '';
+  background-image: url('border1.svg'); /* The SVG containing the ornamental band pattern */
+  background-repeat: repeat-x; /* Repeat horizontally to fill the width */
+  background-size: auto 100%;
+  position: absolute;
+  bottom: 1.8em; /* Distance from bottom equal to height (as requested) */
+  left: 0;
+  right: 0;
+  height: 1.8em; /* 1.5x taller than before, approximately 75% of H2 headline height (2.488em) */
+  z-index: 3; /* Ensure it appears above other elements */
+}
+
+/* Adjust SVG border size in mobile view to maintain proportion with smaller text */
+@media (max-width: 639px) {
+  section:not(.cover-container):not([data-background-image]):not(:has(img:not([style*="display: none"]):not([style*="visibility: hidden"]):not([hidden])))::after {
+    bottom: 1.275em;
+    height: 1.275em; /* 1.5x taller than before, approximately 75% of mobile H2 font size (1.728em) */
+  }
+}
+
+/* Dark theme adjustments for SVG border - enhance visibility without being too bright */
+.dark section:not(.cover-container):not([data-background-image]):not(:has(img:not([style*="display: none"]):not([style*="visibility: hidden"]):not([hidden])))::after {
+  opacity: 0.9; /* Increase opacity slightly for better visibility in dark mode */
+  filter: brightness(0.95); /* Slightly dim the border in dark mode */
+}
+
+/*************************************************************************************************/
 /* THEME-SPECIFIC STYLING */
 
 /* Light theme - Parchment colors */
