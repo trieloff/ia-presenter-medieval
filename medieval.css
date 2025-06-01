@@ -250,7 +250,41 @@ section > :not([class*="layout-"]) li,
   color: #1C1C1C;
 }
 
-/* Drop caps for first paragraphs in default layout when no headings present */
+/* Extra spectacular treatment for the very first slide opening initial */
+section:first-child .layout-default > div > p:first-child::first-letter,
+section:first-of-type .layout-default > div > p:first-child::first-letter,
+.layout-cover > div > p:first-child::first-letter,
+.layout-title > div > p:first-child::first-letter {
+  font-family: 'Almendra Display', serif;
+  font-size: 6em;
+  line-height: 0.6;
+  float: left;
+  margin: 0.05em 0.2em 0 0;
+  color: #8B0000;
+  font-weight: bold;
+  text-shadow: 
+    4px 4px 0px #2C1810,
+    5px 5px 0px #654321,
+    6px 6px 12px rgba(0,0,0,0.8),
+    0 0 16px rgba(139,0,0,0.6),
+    0 0 24px rgba(139,0,0,0.4),
+    0 0 32px rgba(212,175,55,0.3);
+  -webkit-text-stroke: 3px #654321;
+  filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.7));
+  border: 5px double rgba(212, 175, 55, 0.6);
+  border-radius: 12px;
+  padding: 0.15em 0.2em;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255,215,0,0.2) 0%, transparent 60%),
+    linear-gradient(135deg, 
+      rgba(245, 230, 211, 0.4), 
+      rgba(210, 180, 140, 0.3), 
+      rgba(139, 69, 19, 0.2),
+      rgba(212, 175, 55, 0.1));
+  position: relative;
+}
+
+/* Regular drop caps for other slides */
 .layout-default > div > p:first-child::first-letter {
   font-family: 'Almendra Display', serif;
   font-size: 4.5em;
@@ -455,6 +489,34 @@ section > :not([class*="layout-"]) li,
   color: #C0C0C0 !important;
 }
 
+/* Dark theme - spectacular first slide opening initial */
+.dark section:first-child .layout-default > div > p:first-child::first-letter,
+.dark section:first-of-type .layout-default > div > p:first-child::first-letter,
+.dark .layout-cover > div > p:first-child::first-letter,
+.dark .layout-title > div > p:first-child::first-letter {
+  color: #FFD700 !important;
+  text-shadow: 
+    3px 3px 0px #8B4513,
+    4px 4px 0px #654321,
+    5px 5px 0px #2C1810,
+    6px 6px 16px rgba(0,0,0,0.9),
+    0 0 20px rgba(255,215,0,0.9),
+    0 0 32px rgba(255,215,0,0.7),
+    0 0 48px rgba(255,215,0,0.5),
+    0 0 64px rgba(255,215,0,0.3);
+  -webkit-text-stroke: 3px #8B4513;
+  filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.8));
+  border: 5px double rgba(255, 215, 0, 0.8);
+  background: 
+    radial-gradient(circle at 40% 40%, rgba(255,215,0,0.3) 0%, transparent 60%),
+    linear-gradient(135deg, 
+      rgba(255, 215, 0, 0.3), 
+      rgba(139, 69, 19, 0.4), 
+      rgba(26, 10, 51, 0.5),
+      rgba(75, 0, 130, 0.3));
+}
+
+/* Dark theme - regular drop caps for other slides */
 .dark .layout-default > div > p:first-child::first-letter {
   color: #FFD700 !important;
   text-shadow: 
