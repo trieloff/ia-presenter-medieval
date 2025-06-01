@@ -169,14 +169,12 @@ blockquote .line {
   position: relative;
 }
 
-blockquote .line::before {
+blockquote .line:first-child::before {
   content: '❦';
   position: absolute;
   left: 50%;
   top: -0.7em;
   transform: translateX(-50%);
-  background: var(--background-color, white);
-  padding: 0 0.5em;
   font-size: 1.2em;
   color: currentColor;
 }
