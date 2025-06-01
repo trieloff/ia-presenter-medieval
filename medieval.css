@@ -148,22 +148,43 @@ blockquote {
   position: relative;
 }
 
-blockquote::before {
-  content: '"';
-  font-family: 'Almendra Display', serif;
-  font-size: 4em;
-  color: rgba(212, 175, 55, 0.3);
-  position: absolute;
-  left: -0.2em;
-  top: -0.3em;
-  line-height: 1;
-}
+/* Removed problematic large quote mark */
 
 /* Ensure paragraphs inside blockquotes use Display font */
 [class*="layout-"] > div blockquote p {
   font-family: 'Almendra Display', serif;
   font-style: italic;
   color: #2C2C2C;
+}
+
+/* Medieval line styling for blockquotes */
+blockquote .line {
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    currentColor 20%, 
+    currentColor 80%, 
+    transparent 100%);
+  margin: 0.8em 0;
+  position: relative;
+}
+
+blockquote .line::before {
+  content: '❦';
+  position: absolute;
+  left: 50%;
+  top: -0.7em;
+  transform: translateX(-50%);
+  background: var(--background-color, white);
+  padding: 0 0.5em;
+  font-size: 1.2em;
+  color: currentColor;
+}
+
+/* Emphasis and strong styling */
+em, strong {
+  color: #8B4513;
+  font-weight: bold;
 }
 
 /* Display font for headings that are the only element on slide */
@@ -415,4 +436,14 @@ section > :not([class*="layout-"]) li,
 
 .dark .layout-default > div > p:first-child::first-letter {
   color: #FFD700 !important;
+}
+
+/* Dark theme overrides for blockquote lines and emphasis */
+.dark blockquote .line {
+  color: #FFD700;
+}
+
+.dark em,
+.dark strong {
+  color: #FFD700;
 }
