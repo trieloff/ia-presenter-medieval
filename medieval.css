@@ -252,13 +252,19 @@ section > :not([class*="layout-"]) li,
 
 /* Drop caps for first paragraphs in default layout when no headings present */
 .layout-default > div > p:first-child::first-letter {
-  font-family: 'Almendra SC', serif;
-  font-size: 3.5em;
-  line-height: 0.8;
+  font-family: 'Almendra Display', serif;
+  font-size: 4.5em;
+  line-height: 0.7;
   float: left;
-  margin: 0.1em 0.1em 0 0;
-  color: #2C2C2C;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin: 0.05em 0.15em 0 0;
+  color: #8B0000;
+  font-weight: bold;
+  text-shadow: 
+    3px 3px 0px #2C1810,
+    4px 4px 8px rgba(0,0,0,0.6),
+    0 0 12px rgba(139,0,0,0.4);
+  -webkit-text-stroke: 2px #654321;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
 }
 
 /* Remove drop caps when headings are present */
@@ -444,6 +450,15 @@ section > :not([class*="layout-"]) li,
 
 .dark .layout-default > div > p:first-child::first-letter {
   color: #FFD700 !important;
+  text-shadow: 
+    2px 2px 0px #8B4513,
+    3px 3px 0px #654321,
+    4px 4px 8px rgba(0,0,0,0.8),
+    0 0 16px rgba(255,215,0,0.8),
+    0 0 24px rgba(255,215,0,0.6),
+    0 0 32px rgba(255,215,0,0.4);
+  -webkit-text-stroke: 2px #8B4513;
+  filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.7));
 }
 
 /* Dark theme overrides for blockquote lines and emphasis */

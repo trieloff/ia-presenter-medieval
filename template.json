@@ -5,5 +5,11 @@
   "Version" : 1,
   "Author" : "Lars Trieloff",
   "BodyFont" : "Almendra",
-  "TitleFont" : "Almendra SC"
+  "TitleFont" : "Almendra SC",
+  "Layouts": [
+      {
+        "Name": "Cover",
+        "Classes": "invert"
+      }
+    ]
 }
