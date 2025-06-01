@@ -118,6 +118,12 @@ blockquote::before {
   line-height: 1;
 }
 
+/* Ensure paragraphs inside blockquotes use Display font */
+blockquote p {
+  font-family: 'Almendra Display', serif;
+  font-style: italic;
+}
+
 /* Display font for headings that are the only element on slide */
 [class*="layout-"] > div > h1:only-child,
 [class*="layout-"] > div > h2:only-child,
