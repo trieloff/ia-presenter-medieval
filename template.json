@@ -1,0 +1,9 @@
+{
+  "Css" : "basic.css",
+  "Description" : "description",
+  "Name" : "Basic",
+  "Version" : 1,
+  "Author" : "author",
+  "BodyFont" : "Helvetica",
+  "TitleFont" : "Helvetica"
+}
