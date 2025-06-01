@@ -185,10 +185,19 @@ em, strong {
   font-weight: bold;
 }
 
-/* Display font for headings that are the only element on slide */
-[class*="layout-"] > div > h1:only-child,
-[class*="layout-"] > div > h2:only-child,
-[class*="layout-"] > div > h3:only-child {
+/* Display font for headings that are truly alone on single-content layouts */
+.layout-default > div > h1:only-child,
+.layout-default > div > h2:only-child,
+.layout-default > div > h3:only-child,
+.layout-cover > div > h1:only-child,
+.layout-cover > div > h2:only-child,
+.layout-cover > div > h3:only-child,
+.layout-title > div > h1:only-child,
+.layout-title > div > h2:only-child,
+.layout-title > div > h3:only-child,
+.layout-section > div > h1:only-child,
+.layout-section > div > h2:only-child,
+.layout-section > div > h3:only-child {
   font-family: 'Almendra Display', serif;
 }
 
