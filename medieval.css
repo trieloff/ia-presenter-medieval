@@ -124,31 +124,7 @@
   opacity: 0.8;
 }
 
-/* Dark theme text colors */
-.dark section > :not([class*="layout-"]) h1,
-.dark [class*="layout-"] > div h1,
-.dark section > :not([class*="layout-"]) h2,
-.dark [class*="layout-"] > div h2,
-.dark section > :not([class*="layout-"]) h3,
-.dark [class*="layout-"] > div h3,
-.dark section > :not([class*="layout-"]) h5,
-.dark [class*="layout-"] > div h5,
-.dark section > :not([class*="layout-"]) h6,
-.dark [class*="layout-"] > div h6,
-.dark [class*="layout-"] > div blockquote p {
-  color: #FFD700;
-}
 
-.dark section > :not([class*="layout-"]) p,
-.dark [class*="layout-"] > div p,
-.dark section > :not([class*="layout-"]) li,
-.dark [class*="layout-"] > div li {
-  color: #C0C0C0;
-}
-
-.dark .layout-default > div > p:first-child::first-letter {
-  color: #FFD700;
-}
 
 /*************************************************************************************************/
 /* TYPOGRAPHY */
@@ -410,4 +386,33 @@ section > :not([class*="layout-"]) li,
     font-size: 1em;
     line-height: 1.4;
   }
+}
+
+/*************************************************************************************************/
+/* DARK THEME COLOR OVERRIDES */
+
+/* Dark theme text colors - must come after general typography rules */
+.dark section > :not([class*="layout-"]) h1,
+.dark [class*="layout-"] > div h1,
+.dark section > :not([class*="layout-"]) h2,
+.dark [class*="layout-"] > div h2,
+.dark section > :not([class*="layout-"]) h3,
+.dark [class*="layout-"] > div h3,
+.dark section > :not([class*="layout-"]) h5,
+.dark [class*="layout-"] > div h5,
+.dark section > :not([class*="layout-"]) h6,
+.dark [class*="layout-"] > div h6,
+.dark [class*="layout-"] > div blockquote p {
+  color: #FFD700 !important;
+}
+
+.dark section > :not([class*="layout-"]) p,
+.dark [class*="layout-"] > div p,
+.dark section > :not([class*="layout-"]) li,
+.dark [class*="layout-"] > div li {
+  color: #C0C0C0 !important;
+}
+
+.dark .layout-default > div > p:first-child::first-letter {
+  color: #FFD700 !important;
 }
