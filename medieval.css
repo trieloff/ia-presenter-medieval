@@ -124,6 +124,32 @@
   opacity: 0.8;
 }
 
+/* Dark theme text colors */
+.dark section > :not([class*="layout-"]) h1,
+.dark [class*="layout-"] > div h1,
+.dark section > :not([class*="layout-"]) h2,
+.dark [class*="layout-"] > div h2,
+.dark section > :not([class*="layout-"]) h3,
+.dark [class*="layout-"] > div h3,
+.dark section > :not([class*="layout-"]) h5,
+.dark [class*="layout-"] > div h5,
+.dark section > :not([class*="layout-"]) h6,
+.dark [class*="layout-"] > div h6,
+.dark [class*="layout-"] > div blockquote p {
+  color: #FFD700;
+}
+
+.dark section > :not([class*="layout-"]) p,
+.dark [class*="layout-"] > div p,
+.dark section > :not([class*="layout-"]) li,
+.dark [class*="layout-"] > div li {
+  color: #C0C0C0;
+}
+
+.dark .layout-default > div > p:first-child::first-letter {
+  color: #FFD700;
+}
+
 /*************************************************************************************************/
 /* TYPOGRAPHY */
 
@@ -133,7 +159,7 @@ section > :not([class*="layout-"]) h1,
   font-family: 'Almendra SC', serif;
   line-height: 1;
   font-size: 2.986em;
-  color: var(--title-color);
+  color: #2C2C2C;
 }
 
 /* Display font for blockquotes */
@@ -161,7 +187,7 @@ blockquote::before {
 [class*="layout-"] > div blockquote p {
   font-family: 'Almendra Display', serif;
   font-style: italic;
-  color: var(--title-color);
+  color: #2C2C2C;
 }
 
 /* Display font for headings that are the only element on slide */
@@ -187,27 +213,27 @@ section > :not([class*="layout-"]) h2,
   font-family: 'Almendra SC', serif;
   line-height: 1.1;
   font-size: 2.488em;
-  color: var(--title-color);
+  color: #2C2C2C;
 }
 section > :not([class*="layout-"]) h3,
 [class*="layout-"] > div h3 {
   font-family: 'Almendra SC', serif;
   line-height: 1.2;
   font-size: 1.728em;
-  color: var(--title-color);
+  color: #2C2C2C;
 }
 section > :not([class*="layout-"]) h5,
 [class*="layout-"] > div h5 {
   font-family: 'Almendra', serif;
   font-weight: 300;
-  color: var(--title-color);
+  color: #2C2C2C;
 }
 section > :not([class*="layout-"]) h6,
 [class*="layout-"] > div h6 {
   font-family: 'Almendra', serif;
   font-size: 1em;
   line-height: 1.4;
-  color: var(--title-color);
+  color: #2C2C2C;
 }
 
 /* Body Text */
@@ -216,7 +242,7 @@ section > :not([class*="layout-"]) p,
 section > :not([class*="layout-"]) li,
 [class*="layout-"] > div li {
   font-family: 'Almendra', serif;
-  color: var(--body-color);
+  color: #1C1C1C;
 }
 
 /* Drop caps for first paragraphs in default layout when no headings present */
@@ -226,7 +252,7 @@ section > :not([class*="layout-"]) li,
   line-height: 0.8;
   float: left;
   margin: 0.1em 0.1em 0 0;
-  color: var(--accent-1);
+  color: #2C2C2C;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
