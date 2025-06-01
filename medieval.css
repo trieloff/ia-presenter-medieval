@@ -119,7 +119,7 @@ blockquote::before {
 }
 
 /* Ensure paragraphs inside blockquotes use Display font */
-blockquote p {
+[class*="layout-"] > div blockquote p {
   font-family: 'Almendra Display', serif;
   font-style: italic;
 }
