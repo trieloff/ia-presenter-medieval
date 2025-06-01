@@ -44,179 +44,43 @@
   src: url('fonts/AlmendraSC-Regular.ttf') format('truetype');
 }
 
-/*************************************************************************************************/
-/* MEDIEVAL BACKGROUNDS */
-
-/* Background images for different layouts */
-.backgrounds .cover-container {
-  background-image: url('image1.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.backgrounds .title-container {
-  background-image: url('image2.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.backgrounds .section-container {
-  background-image: url('image3.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.backgrounds .default-container {
-  background-image: url('image4.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Medieval overlay effects */
-.slide-background::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg, 
-    rgba(139, 69, 19, 0.1) 0%, 
-    rgba(160, 82, 45, 0.05) 25%, 
-    rgba(210, 180, 140, 0.03) 50%, 
-    rgba(139, 69, 19, 0.05) 75%, 
-    rgba(101, 67, 33, 0.1) 100%
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
-.slide-background::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(128, 0, 128, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-/*************************************************************************************************/
-/* TYPOGRAPHY */
-
-/* Base Typography Styling */
-section > :not([class*="layout-"]) h1,
-[class*="layout-"] > div h1 {
-  font-family: 'Almendra Display', serif;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  letter-spacing: 0.02em;
-}
-
-section > :not([class*="layout-"]) h2,
-[class*="layout-"] > div h2 {
-  font-family: 'Almendra Display', serif;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  letter-spacing: 0.01em;
-}
-
-section > :not([class*="layout-"]) h3,
-[class*="layout-"] > div h3 {
-  font-family: 'Almendra SC', serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
-}
-
-section > :not([class*="layout-"]) p,
-[class*="layout-"] > div p,
-section > :not([class*="layout-"]) li,
-[class*="layout-"] > div li {
-  font-family: 'Almendra', serif;
-  line-height: 1.6;
-  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);
-}
-
-/* Decorative Drop Caps for first paragraphs */
-.layout-default > div > p:first-child::first-letter,
-.layout-caption > div > p:first-child::first-letter {
-  font-family: 'Almendra Display', serif;
-  font-size: 3.5em;
-  line-height: 0.8;
-  float: left;
-  margin: 0.1em 0.1em 0 0;
-  color: var(--accent-1);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Medieval decorative borders */
-.layout-cover > div,
-.layout-title > div {
-  position: relative;
-  z-index: 3;
-}
-
-.layout-cover > div::before,
-.layout-title > div::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  border: 3px solid rgba(212, 175, 55, 0.3);
-  border-image: linear-gradient(45deg, 
-    rgba(212, 175, 55, 0.6), 
-    rgba(139, 69, 19, 0.4), 
-    rgba(212, 175, 55, 0.6)
-  ) 1;
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Ornamental corner decorations */
-.layout-cover > div::after,
-.layout-title > div::after {
-  content: '❦';
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  font-size: 2em;
-  color: rgba(212, 175, 55, 0.7);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  pointer-events: none;
-  z-index: 4;
-}
-
 /* Font Size */
 section > :not([class*="layout-"]) h1,
 [class*="layout-"] > div h1 {
+  font-family: 'Almendra Display', serif;
   line-height: 1;
   font-size: 2.986em;
 }
 section > :not([class*="layout-"]) h2,
 [class*="layout-"] > div h2 {
+  font-family: 'Almendra Display', serif;
   line-height: 1.1;
   font-size: 2.488em;
 }
 section > :not([class*="layout-"]) h3,
 [class*="layout-"] > div h3 {
+  font-family: 'Almendra SC', serif;
   line-height: 1.2;
   font-size: 1.728em;
 }
 section > :not([class*="layout-"]) h5,
 [class*="layout-"] > div h5 {
+  font-family: 'Almendra', serif;
   font-weight: 300;
 }
 section > :not([class*="layout-"]) h6,
 [class*="layout-"] > div h6 {
+  font-family: 'Almendra', serif;
   font-size: 1em;
   line-height: 1.4;
+}
+
+/* Body Text */
+section > :not([class*="layout-"]) p,
+[class*="layout-"] > div p,
+section > :not([class*="layout-"]) li,
+[class*="layout-"] > div li {
+  font-family: 'Almendra', serif;
 }
 
 .layout-title > :not([class*="layout-"]) > h1 + h2,
@@ -348,72 +212,13 @@ section > :not([class*="layout-"]) h6,
   }
   section > :not([class*="layout-"]) h5,
   [class*="layout-"] > div h5 {
+    font-family: 'Almendra', serif;
     font-weight: normal;
   }
   section > :not([class*="layout-"]) h6,
   [class*="layout-"] > div h6 {
+    font-family: 'Almendra', serif;
     font-size: 1em;
     line-height: 1.4;
   }
-}
-
-/*************************************************************************************************/
-/* MEDIEVAL CONTENT ENHANCEMENTS */
-
-/* Quote styling with Medieval flair */
-blockquote {
-  font-family: 'Almendra', serif;
-  font-style: italic;
-  border-left: 4px solid var(--accent-1);
-  padding-left: 1.5em;
-  margin-left: 0;
-  position: relative;
-}
-
-blockquote::before {
-  content: '"';
-  font-family: 'Almendra Display', serif;
-  font-size: 4em;
-  color: rgba(212, 175, 55, 0.3);
-  position: absolute;
-  left: -0.2em;
-  top: -0.3em;
-  line-height: 1;
-}
-
-/* List styling with Medieval bullets */
-ul li::marker {
-  content: '⚜ ';
-  color: var(--accent-1);
-}
-
-ol li::marker {
-  font-family: 'Almendra SC', serif;
-  color: var(--accent-1);
-  font-weight: bold;
-}
-
-/* Table styling with Medieval borders */
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 2px solid rgba(212, 175, 55, 0.5);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th {
-  background: linear-gradient(135deg, 
-    rgba(212, 175, 55, 0.2), 
-    rgba(139, 69, 19, 0.1)
-  );
-  font-family: 'Almendra SC', serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-td {
-  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-  padding: 0.8em 1em;
 }
