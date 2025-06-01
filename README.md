@@ -2,6 +2,8 @@
 
 This is a custom Medieval-themed template for iA Presenter, providing an elegant, medieval-inspired design for your presentations.
 
+![Medieval Theme Preview](template.jpg)
+
 ## Installation Instructions
 
 ### Method 1: Manual Installation
