@@ -186,7 +186,16 @@ section:not(.cover-container):not([data-background-image]):not(:has(img:not([sty
   opacity: 0.8;
 }
 
+/**************/
+/* Override Layout */
 
+[class*="layout-"] > :not([class*="layout-"]) {
+    align-items: center !important;
+}
+
+[class*="layout-"] > :not([class*="layout-"]):has(p) {
+    flex-direction: row;
+}
 
 /*************************************************************************************************/
 /* TYPOGRAPHY */
@@ -198,6 +207,7 @@ section > :not([class*="layout-"]) h1,
   line-height: 1;
   font-size: 2.986em;
   color: #2C2C2C;
+  text-align: center;
 }
 
 /* Display font for blockquotes */
@@ -211,6 +221,7 @@ blockquote {
   margin-left: 0;
   position: relative;
   text-align: center;
+  width: 100%;
 }
 
 /* Removed problematic large quote mark */
@@ -356,16 +367,6 @@ section > :not([class*="layout-"]) pre code,
   font-size: inherit;
 }
 
-/* Center h1 and h2 headings that contain only inline code, or h1 that's the only element */
-section > :not([class*="layout-"]) h1:has(code):not(:has(br)):not(:has(p)):not(:has(ul)):not(:has(ol)):not(:has(pre)),
-[class*="layout-"] > div h1:has(code):not(:has(br)):not(:has(p)):not(:has(ul)):not(:has(ol)):not(:has(pre)),
-section > :not([class*="layout-"]) h1:only-child,
-[class*="layout-"] > div h1:only-child,
-section > :not([class*="layout-"]) h2:has(code):not(:has(br)):not(:has(p)):not(:has(ul)):not(:has(ol)):not(:has(pre)),
-[class*="layout-"] > div h2:has(code):not(:has(br)):not(:has(p)):not(:has(ul)):not(:has(ol)):not(:has(pre)) {
-  text-align: center;
-}
-
 /* Extra spectacular treatment for the very first slide opening initial */
 section:first-child .layout-default > div > p:first-child::first-letter,
 section:first-of-type .layout-default > div > p:first-child::first-letter,
@@ -373,7 +374,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 .layout-title > div > p:first-child::first-letter {
   font-family: 'Kanzlei Initialen', serif;
   font-size: 6em;
-  line-height: 0.6;
+  line-height: 0.4;
   float: left;
   color: #8B0000;
   position: relative;
@@ -382,8 +383,8 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 /* Regular drop caps for other slides */
 .layout-default > div > p:first-child::first-letter {
   font-family: 'Kanzlei Initialen', serif;
-  font-size: 4.5em;
-  line-height: 0.7;
+  font-size: 6em;
+  line-height: 0.5;
   float: left;
   margin: 0.05em;
   color: #8B0000;
