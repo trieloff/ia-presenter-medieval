@@ -97,12 +97,6 @@
   opacity: 0.6;
 }
 
-/* Ensure slide content appears above parchment overlay */
-.slide-content,
-[class*="layout-"] > div {
-  position: relative;
-  z-index: 2;
-}
 
 /*************************************************************************************************/
 /* DECORATIVE SVG BORDER FOR SLIDES WITHOUT IMAGES */
@@ -189,12 +183,8 @@ section:not(.cover-container):not([data-background-image]):not(:has(img:not([sty
 /**************/
 /* Override Layout */
 
-[class*="layout-"] > :not([class*="layout-"]) {
-    align-items: center !important;
-}
-
-[class*="layout-"] > :not([class*="layout-"]):has(p) {
-    flex-direction: row;
+body {
+    --text-horizontal-align-layout-cover:center;
 }
 
 /*************************************************************************************************/
@@ -247,6 +237,10 @@ blockquote .line {
   position: relative;
 }
 
+div.element-group blockquote div.line {
+    display: block;
+}
+
 blockquote .line:first-child::before {
   content: '❦';
   position: absolute;
@@ -258,8 +252,8 @@ blockquote .line:first-child::before {
 }
 
 /* Emphasis and strong styling */
-em, strong {
-  color: #B22222;
+ section.light em, section.light strong {
+  color: var(--lightaccent1color);
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
@@ -336,8 +330,8 @@ section > :not([class*="layout-"]) pre,
 section > :not([class*="layout-"]) pre code,
 [class*="layout-"] > div pre code {
   font-family: 'Kelmscott Mono', monospace;
-  background-color: rgba(26,10,51,0.8);
-  border: 1px solid rgba(26,10,51,0.9);
+  background-color: rgba(26,10,51,0.8)!important;
+  border: 1px solid rgba(26,10,51,0.9)!important;
   border-radius: 3px;
   color: #F5E6D3;
 }
@@ -603,7 +597,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 .dark [class*="layout-"] > div code,
 .dark section > :not([class*="layout-"]) pre,
 .dark [class*="layout-"] > div pre {
-  background-color: rgba(245,230,211,0.9);
+  background-color: rgba(245,230,211,0.9)!important;
   border-color: rgba(139,69,19,0.8);
   color: #2C2C2C;
 }
