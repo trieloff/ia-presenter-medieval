@@ -44,6 +44,13 @@
   src: url('fonts/AlmendraSC-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Kanzlei Initialen';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/Kanzlei-Initialen.ttf') format('truetype');
+}
+
 /*************************************************************************************************/
 /* PARCHMENT BACKGROUND OVERLAY */
 
@@ -303,7 +310,7 @@ section:first-child .layout-default > div > p:first-child::first-letter,
 section:first-of-type .layout-default > div > p:first-child::first-letter,
 .layout-cover > div > p:first-child::first-letter,
 .layout-title > div > p:first-child::first-letter {
-  font-family: 'Almendra Display', serif;
+  font-family: 'Kanzlei Initialen', serif;
   font-size: 6em;
   line-height: 0.6;
   float: left;
@@ -341,7 +348,7 @@ section:first-of-type .layout-default > div > p:first-child::first-letter,
 
 /* Regular drop caps for other slides */
 .layout-default > div > p:first-child::first-letter {
-  font-family: 'Almendra Display', serif;
+  font-family: 'Kanzlei Initialen', serif;
   font-size: 4.5em;
   line-height: 0.7;
   float: left;
