@@ -184,7 +184,15 @@ section:not(.cover-container):not([data-background-image]):not(:has(img:not([sty
 /* Override Layout */
 
 body {
-    --text-horizontal-align-layout-cover:center;
+    --text-horizontal-align-layout-cover: center;
+    --text-horizontal-align-layout-default: center;
+}
+
+@container style(--text-horizontal-align-layout-default: center) {
+    section .slide-contents.layout-default .element-group p {
+        text-align: center!important;
+        width: auto;
+    }
 }
 
 /*************************************************************************************************/
